@@ -1,0 +1,24 @@
+Create a new MySQL database called company.
+
+Create the department's table with the following attributes:
+ID (Primary Key)
+Department_Name
+
+Create the employee's table with the following attributes:
+ID (Primary Key)
+Employee_Name
+Department_ID (Foreign key)
+
+While defining the foreign key, remember to specify “ON DELETE CADCADE” – so that when a department is deleted, its corresponding employees will automatically be deleted.
+
+
+Use SQL INSERT statement to insert at least three (3) records in the employees and departments tables.
+
+Use SQL ALTER statement to change the employees table by adding salary column to it. Make sure that the value is not null.
+
+Use SQL UPDATE statement to update the values of the salary column in the employees table.
+
+Use SQL DELETE statement to delete a department from the department table and its corresponding employees in the employees table.
+
+Use SQL SELECT statement to show the result of the two tables in your console.
+

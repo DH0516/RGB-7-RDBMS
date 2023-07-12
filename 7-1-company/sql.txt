@@ -1,0 +1,51 @@
+-- Create the company database
+CREATE DATABASE company;
+
+-- Switch to the company database
+USE company;
+
+-- Create the departments table
+CREATE TABLE departments (
+  ID INT PRIMARY KEY,
+  Department_Name VARCHAR(50)
+);
+
+-- Create the employees table
+CREATE TABLE employees (
+  ID INT PRIMARY KEY,
+  Employee_Name VARCHAR(50),
+  Department_ID INT,
+  Salary DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (Department_ID) REFERENCES departments(ID) ON DELETE CASCADE
+);
+
+-- Insert records into the departments table
+INSERT INTO departments (ID, Department_Name) VALUES
+(1, 'Sales'),
+(2, 'Marketing'),
+(3, 'HR');
+
+-- Insert records into the employees table
+INSERT INTO employees (ID, Employee_Name, Department_ID, Salary) VALUES
+(1, 'John Doe', 1, 5000),
+(2, 'Jane Smith', 2, 6000),
+(3, 'Mike Johnson', 3, 4500);
+
+-- Alter the employees table to add the salary column
+ALTER TABLE employees
+ADD COLUMN Salary DECIMAL(10,2) NOT NULL;
+
+-- Update the values of the salary column in the employees table
+UPDATE employees
+SET Salary = 5500
+WHERE ID = 1;
+
+-- Delete a department and its corresponding employees
+DELETE FROM departments
+WHERE ID = 3;
+
+-- Select records from the departments table
+SELECT * FROM departments;
+
+-- Select records from the employees table
+SELECT * FROM employees;
