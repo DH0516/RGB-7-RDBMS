@@ -12,4 +12,4 @@ const Employee = require('./models/employee.js');
 const Department = require('./models/department.js');
 
 Department.hasMany(Employee, {foreignKey: {allowNull: false}, onDelete: 'CASCADE'});
-
+// It means a department model has many employee models

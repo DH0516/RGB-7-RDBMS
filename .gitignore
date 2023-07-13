@@ -1,3 +1,5 @@
 7-2-Sequelize/node_modules/
-7-DBs\7-2-Sequelize\.env
+7-2-Sequelize/.env
 *.env
+7-3-TaskModel/node_modules/
+7-3-TaskModel/configuration/credentials.js
